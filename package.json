@@ -1,0 +1,12 @@
+{
+  "name": "webnerds",
+  "version": "1.0.0",
+  "description": "Servidor web para um trabalho da diciplica de Desenvolvimento web 2.",
+  "main": "server.js",
+  "author": "José Augusto Queiroz Comparotto Gomes <jose.gomes3@estudante.ifms.edu.br>, Renan Barreto de Morais <renan.morais@estudante.ifms.edu.br>",
+  "license": "Proprietary",
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

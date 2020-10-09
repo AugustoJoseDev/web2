@@ -1,0 +1,67 @@
+header {
+    background-color: rgb(9, 152, 73);
+}
+body {
+    margin: 0;
+}
+
+.background {
+    background-image: url(https://c.pxhere.com/images/eb/0b/6c5f4bb5f46423d124737477c467-1594712.jpg!d);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    box-shadow: inset 0 0 25vw #000000;
+}
+
+* {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul.menu li {
+    display: inline-block;
+}
+
+ul.menu {
+    display: inline-block;
+    width: fit-content;
+    position: absolute;
+    right: 0;
+    margin: 25px 10%;
+}
+
+.titulo {
+    display: inline-block;
+    margin: 25px 2%;
+}
+
+ul.menu li a,
+.titulo a {
+    font-size: 22px;
+    margin: 0 10px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(240, 240, 240);
+}
+
+ul.menu li a:hover,
+.titulo a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border-top: solid 1px rgba(22, 88, 5, 0.945);
+    border-bottom: solid 1px rgba(32, 124, 9, 0.945);
+    margin: 0;
+}
+
+/* https://vignette.wikia.nocookie.net/mitologinha/images/9/95/%C3%81rtemis.png/revision/latest?cb=20191008171953&path-prefix=pt-br */
+/* https://pm1.narvii.com/6312/da5dcdf5f0345b7da347c5a742ea2189a1682514_00.jpg */
