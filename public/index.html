@@ -43,6 +43,15 @@
         </div>
     </nav>
 
+    texto.
+    <span id="texto1" class="hidden">O texto extra que será exibido ao apertar o botão de ler mais</span>
+    <button onclick="readMore('texto1',this)">Ler mais</button>
+    <script>
+        function readMore(id,botao){
+            document.getElementById(id).className=""
+            botao.innerText="Ler Menos"
+        }
+    </script>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
