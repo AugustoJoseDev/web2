@@ -85,7 +85,7 @@ body::-webkit-scrollbar {
 }
 
 .container {
-    padding-top: 10%;
+    padding-top: 125px;
     padding-bottom: 5%;
 }
 
@@ -94,19 +94,20 @@ body::-webkit-scrollbar {
     max-width: 350px;
     margin: 20px auto 20px auto;
     padding: 0;
-    height: 675px;
+    height: 650px;
+    align-items: center;
+    justify-content: center;
 }
 .card {
     min-width: 300px;
-    flex: 0;
+    min-height: 600px;
     padding: 15px;
     color: #0e0e0e;
-    height: fit-content;
-    margin: auto;
     transition: 0.3s;
 }
 .card-wrapper:hover .card {
-    flex: 1;
+    min-width: 100%;
+    min-height: 100%;
     transition: 0.3s;
 }
 
