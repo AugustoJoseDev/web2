@@ -5,9 +5,10 @@
   "main": "server.js",
   "author": "José Augusto Queiroz Comparotto Gomes <jose.gomes3@estudante.ifms.edu.br>, Renan Barreto de Morais <renan.morais@estudante.ifms.edu.br>",
   "license": "Proprietary",
-  "private": true,
+  "private": false,
   "dependencies": {
     "bootstrap": "^4.5.2",
     "express": "^4.17.1"
-  }
+  },
+  "repository": "https://github.com/AugustoJoseDev/web2.git"
 }
