@@ -7,6 +7,10 @@ body {
     color: white;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .hidden {
     display: none;
 }
@@ -41,10 +45,17 @@ body {
 
 .navbar * {
     color: #fff !important;
-    font-size: 24px;
+    font-size: 22px;
     z-index: 2;
 }
 
+.navbar a {
+    letter-spacing: 2px;
+}
+.nav-link {
+    margin-left: 10px;
+    margin-right: 10px;
+}
 .navbar-toggler {
     color: #fff !important;
     border-color: #fff !important;
@@ -74,28 +85,35 @@ body {
 }
 
 .container {
-    padding-top: 150px;
+    padding-top: 10%;
+    padding-bottom: 5%;
 }
 
 .card {
     max-width: 300px;
-    margin: 50px auto 0 auto;
+    margin: 50px auto 50px auto;
     padding: 15px;
     color: #0e0e0e;
     height: fit-content;
-    transition: 0.4s;
+    transition: 0.3s;
 }
 .card:hover {
     max-width: 325px;
     margin: 25px auto 25px auto;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
-/* .footer {
+.footer {
+    position: relative;
+    background-color: #00000090;
     width: 100%;
-    text-align: center;
+    height: fit-content;
     bottom: 0;
-} */
+    padding: 30px;
+    margin-top: 100px;
+    text-align: center;
+    text-transform: uppercase;
+}
 
 /* https://vignette.wikia.nocookie.net/mitologinha/images/9/95/%C3%81rtemis.png/revision/latest?cb=20191008171953&path-prefix=pt-br */
 /* https://pm1.narvii.com/6312/da5dcdf5f0345b7da347c5a742ea2189a1682514_00.jpg */
