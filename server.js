@@ -4,8 +4,10 @@ const app = express()
 
 app.use('/', express.static(__dirname + "/public"))
 
-app.use('/js', express.static(__dirname + "/node_modules/bootstrap/dist/js"))
-app.use('/css', express.static(__dirname + "/node_modules/bootstrap/dist/css"))
+app.use('/bootstrap/css', express.static(__dirname + "/node_modules/bootstrap/dist/css/bootstrap.min.css"))
+app.use('/bootstrap/js', express.static(__dirname + "/node_modules/bootstrap/dist/js/bootstrap.min.js"))
+app.use('/jquery', express.static(__dirname + "/node_modules/jquery/dist/jquery.slim.min.js"))
+app.use('/popper', express.static(__dirname + "/node_modules/popper.js/dist/popper.min.js"))
 
 app.listen(5000, () => {
 
@@ -13,4 +15,4 @@ app.listen(5000, () => {
 
 })
 
-// https://getbootstrap.com/docs/4.5/components/navbar
+// https://code.jquery.com/jquery-3.5.1.slim.min.js
