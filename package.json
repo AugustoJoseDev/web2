@@ -1,7 +1,7 @@
 {
   "name": "web2",
   "version": "1.0.0",
-  "description": "Servidor web para um trabalho da diciplica de Desenvolvimento web 2.",
+  "description": "Servidor web para um trabalho da diciplina de Desenvolvimento web 2.",
   "main": "server.js",
   "contributors": [
     "José Augusto Queiroz Comparotto Gomes <jose.gomes3@estudante.ifms.edu.br>",
