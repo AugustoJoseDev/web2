@@ -104,6 +104,7 @@ body::-webkit-scrollbar {
     padding: 15px;
     color: #0e0e0e;
     transition: 0.3s;
+    text-align: justify;
 }
 .card-wrapper:hover .card {
     min-width: 100%;
