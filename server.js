@@ -13,9 +13,5 @@ app.use('/popper.js', express.static(__dirname + "/node_modules/popper.js/dist/p
 
 
 app.listen(5000, () => {
-
     console.log("Escutando em http://localhost:5000")
-
 })
-
-// https://code.jquery.com/jquery-3.5.1.slim.min.js
