@@ -7,6 +7,9 @@
     "José Augusto Queiroz Comparotto Gomes <jose.gomes3@estudante.ifms.edu.br>",
     "Renan Barreto de Morais <renan.morais@estudante.ifms.edu.br>"
   ],
+  "scripts": {
+    "start": "node server.js"
+  },
   "license": "Proprietary",
   "private": false,
   "dependencies": {
