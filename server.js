@@ -12,6 +12,6 @@ app.use('/jquery.js', express.static(__dirname + "/node_modules/jquery/dist/jque
 app.use('/popper.js', express.static(__dirname + "/node_modules/popper.js/dist/popper.min.js"))
 
 
-app.listen(5000, () => {
-    console.log("Escutando em http://localhost:5000")
+app.listen(80, () => {
+    console.log("Escutando em http://localhost:80")
 })
