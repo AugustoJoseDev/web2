@@ -109,6 +109,11 @@ body::-webkit-scrollbar {
     min-width: 100%;
     min-height: 100%;
     transition: 0.3s;
+    font-size: 121% !important;
+    transition: 0.3s;
+}
+.card-wrapper:hover .card-title {
+    font-size: 121% !important;
 }
 
 .footer {
