@@ -80,7 +80,6 @@ body::-webkit-scrollbar {
 
 .nav-link:hover {
     color: aqua !important;
-    text-decoration: underline;
     transition: 0.4s;
 }
 
