@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <%- include ('partials/head',{...this, title:equipe}) %>
+
+    <body>
+        <%- include ('partials/background',this) %> 
+
+        <%- include ('partials/nav',this) %> 
+
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <% figuras.forEach( figura => { %> 
+                
+                    <div class="card-wrapper col-sm-12 col-md-6">
+                    <div class="card">
+                        <img class="card-img-top" src="<%= figura.img %>" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= figura.nome %></h5>
+                            <p class="card-text"><%= figura.resumo %> </p>
+                            <a href="#" class="btn btn-primary saiba-mais">Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <% }) %> 
+
+            </div>
+        </div>
+
+        <%- include ('partials/footer',this) %> 
+
+        <%- include ('partials/scripts',this) %> 
+
+        <script>
+            function lerMais(text){
+                if (text.length>200) {
+                    return text.substr(0,200).split(" ").join(" ") + '... <a href="#"> Ler mais.</a>'
+                }
+                else return text
+            }
+            
+
+            function aplicarLerMais(){
+                const cards = Array.from(document.querySelector('div.container>div.row').children)
+
+                cards.forEach(card => {
+                    const resumo = card.querySelector('p.card-text')
+                    
+                    resumo.innerHTML = lerMais(resumo.innerHTML)
+
+                })
+
+            }
+
+            aplicarLerMais()
+        </script>
+    </body>
+
+</html>

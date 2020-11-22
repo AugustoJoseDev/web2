@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<%- include ('partials/head',{...this, title: "Inicio"}) %>
+
+<body>
+    <%- include ('partials/background',this) %>
+
+    <%- include ('partials/nav',this) %>
+
+    <div class="container">
+        <% pages.forEach( ({ equipe, figuras, alunos }) =>{ %> 
+        
+        <a href="/<%=equipe.toLowerCase().replace(' ','-')%>" class="page-link">
+            <h2><%=equipe%>: <%=figuras.map(figura => figura.nome).join(', ') %></h2>
+            <p><%= alunos.join(' e ') %></p>
+        </a>
+        
+        <% }) %> 
+    </div>
+
+    <%- include ('partials/footer', {...this, alunos:["José Augusto","Renan Barreto"]}) %>
+
+    <%- include ('partials/scripts',this) %>
+
+</body>
+
+</html>
