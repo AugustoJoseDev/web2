@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
+<% function beautify(str){
+    return str.toLowerCase().replace(/\s+/g,'-').normalize("NFD").replace(/[^a-zA-Z-]/g,"")
+} %> 
+
 <%- include ('partials/head',{...this, title: "Inicio"}) %>
 
 <body>
@@ -11,7 +15,7 @@
     <div class="container">
         <% pages.forEach( ({ equipe, figuras, alunos }) =>{ %> 
         
-        <a href="/<%=equipe.toLowerCase()%>" class="page-link">
+        <a href="/<%=beautify(equipe) %>" class="page-link">
             <h2><%=equipe%>: <%=figuras.map(figura => figura.nome).join(', ') %></h2>
             <p><%= alunos.join(' e ') %></p>
         </a>
