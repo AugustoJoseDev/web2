@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+
+<%- include ('../partials/head',{...this, title: "Inicio"}) %>
+
+<body>
+    <%- include ('../partials/background',this) %>
+
+    <%- include ('../partials/nav',this) %>
+
+    <div class="container">
+        <% pages.forEach( ({ id, nome, Alunos,FigurasMitologicas }) =>{ %> 
+        
+        <a href="/pages/<%=id%>" class="page-link">
+            <h2><%=nome%>: <%=FigurasMitologicas.map(figura => figura.nome).join(', ') %></h2>
+            <p><%= Alunos.map(a => a.nome).join(' e ') %></p>
+        </a>
+        
+        <% }) %> 
+    </div>
+
+
+    <%- include ('../partials/footer', {...this, Alunos:[{nome:"José Augusto"},{nome:"Renan Barreto"}]}) %>
+
+    <%- include ('../partials/scripts',this) %>
+
+</body>
+
+</html>

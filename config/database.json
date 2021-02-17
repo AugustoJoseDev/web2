@@ -1,0 +1,7 @@
+{
+    "dialect": "sqlite",
+    "storage": "database.db",
+    "define":{
+        "timestamps":false
+    }
+  }

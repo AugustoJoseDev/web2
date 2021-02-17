@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <%- include ('../partials/head',{...this, title:nome}) %>
+
+    <body>
+        <%- include ('../partials/background',this) %> 
+
+        <%- include ('../partials/nav',this) %> 
+
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <% FigurasMitologicas.forEach( figura => { %> 
+                
+                    <div class="card-wrapper col-sm-12 col-md-6">
+                    <div class="card">
+                        <img class="card-img-top" src="<%= figura.image_url %>" alt="Imagem de <%= figura.nome %>">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= figura.nome %></h5>
+                            <p class="card-text"><span class="text"><%= figura.resumo %></span><span class="lermais"></span></p>
+                            <span class="descricao hidden"><%= figura.descricao %></span>
+                            <a href="#" class="btn btn-primary saiba-mais" onclick="saibaMais(this)">Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <% }) %> 
+
+            </div>
+        </div>
+
+        <%- include ('../partials/modal',this) %>
+
+        <%- include ('../partials/footer',this) %> 
+
+        <%- include ('../partials/scripts',this) %> 
+
+        <script>
+
+            function aplicarLerMais(){
+                const cards = Array.from(document.querySelector('div.container>div.row').children)
+
+                cards.forEach(card => {
+                    const resumo = card.querySelector('p.card-text span.text')
+                    
+                    const text = resumo.innerHTML
+
+                    if (text.length>200) {
+                        const link = card.querySelector('span.lermais')
+
+                        function setLerMais(){
+                            resumo.innerHTML = text.substr(0,200).trim()
+                            link.innerHTML = '...Ler mais'
+                            link.onclick = setLerMenos
+                        }
+
+                        function setLerMenos(){
+                            resumo.innerHTML = text
+                            link.innerHTML = ' Ler menos'
+                            link.onclick = setLerMais
+                        }
+                        
+                        setLerMais()
+                    }
+                })
+
+            }
+
+            aplicarLerMais()
+
+            /**
+             * @param {Element} e 
+             */
+            function saibaMais(e){
+                const modal = document.querySelector('#modal')
+                const textoModal = document.querySelector('.modal-text')
+                const descricao = e.parentElement.querySelector('span.descricao')
+
+                textoModal.innerHTML = descricao.innerHTML
+
+                modal.style.display = 'block'
+            }
+        </script>
+    </body>
+
+</html>

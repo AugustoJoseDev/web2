@@ -1,14 +1,15 @@
 {
   "name": "web2",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Servidor web para um trabalho da diciplina de Desenvolvimento web 2.",
-  "main": "server.js",
+  "main": "src/index.js",
   "contributors": [
     "José Augusto Queiroz Comparotto Gomes <jose.gomes3@estudante.ifms.edu.br>",
     "Renan Barreto de Morais <renan.morais@estudante.ifms.edu.br>"
   ],
   "scripts": {
-    "start": "node server.js"
+    "start": "node src/index.js",
+    "create-tables": "sequelize db:migrate"
   },
   "license": "Proprietary",
   "private": false,
@@ -17,6 +18,11 @@
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "jquery": "^3.5.1",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "sequelize": "^6.5.0",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.2.0"
   }
 }
